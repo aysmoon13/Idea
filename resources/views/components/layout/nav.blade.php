@@ -9,10 +9,12 @@
         </div>
         <div class="flex gap-x-5 items-center">
             @auth
-            <form method="POST" action="/logout">
-                @csrf
-                <button>Log Out</button>
-            </form>
+                <a href="{{ route('profile.edit') }}">Edit Profile</a>
+
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button>Log Out</button>
+                </form>
             @endauth
 
             @guest
